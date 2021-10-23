@@ -32,17 +32,37 @@ namespace MongoDbDemoApp
             //***************************************************************
             //Get Operation
 
-            var recs = db.LoadRecords<Person>("Users");
+            //var recs = db.LoadRecords<Person>("Users");
 
-            foreach (var rec in recs)
-            {
-                Console.Write($"Person Id = {rec.Id} : Person Name = {rec.FirstName}, Person LastName = {rec.LastName}");
-                if (rec.PrimaryAddress != null)
-                {
-                    Console.WriteLine($" Person's City = {rec.PrimaryAddress.City}");
-                }
-                Console.WriteLine();
-            }
+            //foreach (var rec in recs)
+            //{
+            //    Console.Write($"Person Id = {rec.Id} : Person Name = {rec.FirstName}, Person LastName = {rec.LastName}");
+            //    if (rec.PrimaryAddress != null)
+            //    {
+            //        Console.WriteLine($" Person's City = {rec.PrimaryAddress.City}");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //Get By Id Operation
+
+            //var Id = new Guid("5265f785-cdd5-4fc0-adbc-1eaf4fad700a");
+
+            //Person oneRec = db.LoadRecordById<Person>("Users", Id);
+
+            //Console.WriteLine(oneRec.FirstName + " " + oneRec.LastName);
+
+            ////Update or create operation
+
+            //oneRec.DateOfBirth = new DateTime(1982, 10, 31, 0, 0, 0, DateTimeKind.Utc);
+
+            //db.UpSertRecord("Users", oneRec.Id, oneRec);
+
+            ////Delete Operation
+
+            ////db.DeleteRecord<Person>("Users", Id);
+
+
 
             Console.ReadLine();
 
